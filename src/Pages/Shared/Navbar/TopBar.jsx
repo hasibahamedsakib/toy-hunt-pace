@@ -4,7 +4,7 @@ const TopBarCompo = () => {
   const logo = "https://i.ibb.co/wYD5mjJ/R-4-removebg-preview.png";
   return (
     <div className="container ">
-      <div className="flex items-center justify-around">
+      <div className="md:flex items-center justify-around hidden">
         <Navbar.Brand>
           <img src={logo} className="mr-3  w-28 h-28" alt="toy hunt logo" />
           <span className="self-center whitespace-nowrap text-4xl font-bold dark:text-white font-sans ">
