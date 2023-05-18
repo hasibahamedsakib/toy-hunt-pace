@@ -18,8 +18,7 @@ const Category = () => {
     return <>Loading...........</>;
   }
   const { sports, police, truck } = toys;
-  console.log(Array(truck[1]));
-  // console.log(toys.police);
+
   return (
     <div>
       <Tabs forceRenderTabPanel defaultIndex={1} className="container">
@@ -30,7 +29,7 @@ const Category = () => {
         </TabList>
         <TabPanel>
           <Tabs forceRenderTabPanel>
-            <TabList>
+            <TabList className="bg-orange-600 text-white font-bold">
               <Tab>Sports 1</Tab>
               <Tab>Sports 2</Tab>
             </TabList>
@@ -49,7 +48,7 @@ const Category = () => {
 
         <TabPanel>
           <Tabs forceRenderTabPanel>
-            <TabList>
+            <TabList className="bg-lime-600 text-white font-bold">
               <Tab>Police Car 1</Tab>
               <Tab>Police Car 2</Tab>
             </TabList>
@@ -67,7 +66,7 @@ const Category = () => {
         </TabPanel>
         <TabPanel>
           <Tabs forceRenderTabPanel>
-            <TabList>
+            <TabList className="bg-violet-600 text-white font-bold">
               <Tab>Truck Car 1</Tab>
               <Tab>Truck Car 2</Tab>
             </TabList>
