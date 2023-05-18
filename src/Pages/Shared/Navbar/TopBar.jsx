@@ -1,5 +1,6 @@
 import { Navbar } from "flowbite-react";
 import { FaRegUser, FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const TopBarCompo = () => {
   const logo = "https://i.ibb.co/wYD5mjJ/R-4-removebg-preview.png";
   return (
@@ -11,23 +12,25 @@ const TopBarCompo = () => {
             Toy<span className="text-orange-500">Hunt</span>Place
           </span>
         </Navbar.Brand>
-        <div className="border-white  border-2 w-[400px] py-1 px-1 rounded-full flex">
+        <div className="border-slate-600  border-2 w-[400px] py-1 px-1 rounded-full flex">
           <input
             className="w-full bg-transparent focus:border-none focus:outline-none rounded-full placeholder:text-gray-300"
             placeholder="Search"
             type="text"
           />
-          <button className="bg-orange-500 px-6 py-3 rounded-full">
+          <button className="bg-orange-500 px-6 py-3 rounded-full text-white">
             <FaSearch className="w-6 h-6 " />
           </button>
         </div>
-        <div className="flex items-center space-x-2">
-          <FaRegUser className="w-10 h-14  cursor-pointer" />
-          <div>
-            <p>Login Hear</p>
-            <p>My Account</p>
+        <Link to="/login">
+          <div className="flex items-center space-x-2">
+            <FaRegUser className="w-10 h-14  cursor-pointer" />
+            <div>
+              <p>Login Hear</p>
+              <p>My Account</p>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

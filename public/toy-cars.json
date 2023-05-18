@@ -1,0 +1,38 @@
+[
+    {
+        "name": "MIEBELY Remote Control Car, Bugatti Divo 1/16 Scale Rc Cars 12Km/h",
+        "details": {
+            "brand": "MIEBELY",
+            "material": "ABS Plastic",
+            "color": "Gray",
+            "age_range": "Adult, Teen, Kid"
+        },
+        "id": "B093XTFD2T",
+        "description": "Easy to Control: We designed this Bugatti remote control car having in mind nothing but the desire to help get a glimpse of the real driving experience with this supercar. Unlike other similar rc cars, our toy car allows you to control the speed and the proportional throttle by pulling the trigger, exactly like the original car.",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71w%2B0GyFZKL._AC_SL1500_.jpg"
+    },
+    {
+        "name": "Think Gizmos Take Apart Car",
+        "details": {
+            "brand": "Think Gizmos",
+            "material": "Plastic",
+            "color": "Multicolor",
+            "age_range": "3 to 5 years old"
+        },
+        "id": "B01LX5NY95",
+        "description": "Racing cars is fun, but kids will be even more invested in the game when they can build—and dismantle—the racers themselves. This toy car kit includes 30 parts, a drill, screws, the batteries necessary to make it go, and clear instructions. It'll help kids gain a basic understanding of mechanics and math, while also being a blast.",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/81KQ9bQfJ4L._AC_SL1500_.jpg"
+    },
+    {
+        "name": "Fireball Frankie",
+        "details": {
+            "brand": "WOW Toys",
+            "material": "Plastic",
+            "color": "Red",
+            "age_range": "5 years and up"
+        },
+        "id": null,
+        "description": null,
+        "image": null
+    }
+]
