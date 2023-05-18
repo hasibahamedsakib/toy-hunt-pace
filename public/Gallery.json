@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Lottie Truck V2",
+        "url": "https://assets6.lottiefiles.com/packages/lf20_wxu55sii.json",
+        "price": "10"
+    },
+    {
+        "id": 2,
+        "name": "Freight truck",
+        "url": "https://assets6.lottiefiles.com/packages/lf20_lb1rqgye.json",
+        "price": "12"
+    },
+    {
+        "id": 3,
+        "name": "jeep car",
+        "url": "https://assets5.lottiefiles.com/packages/lf20_8NYY2Y.json",
+        "price": "14"
+    },
+    {
+        "id": 4,
+        "name": "Audi Car",
+        "url": "https://assets5.lottiefiles.com/packages/lf20_wkaoqtgc.json",
+        "price": "10"
+    },
+    {
+        "id": 5,
+        "name": "Toyota",
+        "url": "https://assets5.lottiefiles.com/private_files/lf30_mtifqxx7.json",
+        "price": "12"
+    },
+    {
+        "id": 6,
+        "name": "Bangladeshi TomTom",
+        "url": "https://assets5.lottiefiles.com/packages/lf20_swnrn2oy.json",
+        "price": "8"
+    }
+]

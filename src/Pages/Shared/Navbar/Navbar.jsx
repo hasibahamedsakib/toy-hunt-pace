@@ -1,8 +1,12 @@
 import { Navbar } from "flowbite-react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 import TopBarCompo from "./TopBar";
 
 const NavBar = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="bg-slate-200 text-gray-700 font-semibold ">
       <TopBarCompo />
@@ -17,32 +21,39 @@ const NavBar = () => {
         </div>
         <Navbar.Collapse>
           <NavLink
-            className=" py-2 pl-3 pr-4 text-slate-600 font-bold rounded md:bg-trans3arent md:hover:text-orange-500 "
+            className=" py-2 pl-3 pr-4 text-slate-600 font-bold rounded  md:hover:text-orange-500 hover:bg-slate-200 "
             t5="/"
           >
             Home
           </NavLink>
 
           <NavLink
-            className="text-slate-600 font-bold rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-orange-500 py-2 pl-3 pr-4"
+            className="text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4"
             to="/all-toys"
           >
             All Toys
           </NavLink>
+
+          {user && (
+            <>
+              <NavLink
+                className="text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4"
+                to="/my-toys"
+              >
+                My Toys
+              </NavLink>
+
+              <NavLink
+                className="text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4"
+                to="/add-toy"
+              >
+                Add a Toy
+              </NavLink>
+            </>
+          )}
+
           <NavLink
-            className="text-slate-600 font-bold rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-orange-500 py-2 pl-3 pr-4"
-            to="/my-toys"
-          >
-            My Toys
-          </NavLink>
-          <NavLink
-            className="text-slate-600 font-bold rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-orange-500 py-2 pl-3 pr-4"
-            to="/add-toy"
-          >
-            Add a Toy
-          </NavLink>
-          <NavLink
-            className="text-slate-600 font-bold rounded hover:bg-gray-500 md:hover:bg-transparent md:hover:text-orange-500 py-2 pl-3 pr-4"
+            className="text-slate-600 font-bold rounded   md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4"
             to="/blog"
           >
             Blog
