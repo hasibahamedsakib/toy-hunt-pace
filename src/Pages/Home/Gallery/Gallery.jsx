@@ -1,4 +1,3 @@
-import { Button } from "flowbite-react";
 import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard/SingleCard";
 
@@ -37,11 +36,6 @@ const Gallery = () => {
         {gallery.map((gallery) => (
           <SingleCard gallery={gallery} key={gallery.id} />
         ))}
-      </div>
-      <div className="mx-auto w-52">
-        <Button gradientMonochrome="failure" size="lg">
-          View All Recipes
-        </Button>
       </div>
     </div>
   );
