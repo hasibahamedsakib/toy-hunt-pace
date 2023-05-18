@@ -1,11 +1,29 @@
+import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import SingleTabPanel from "./SingleTabPanel";
 
 const Category = () => {
+  const [toys, setToys] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    fetch("toy-cars.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setToys(data);
+        setLoading(false);
+      });
+  }, []);
+  if (loading) {
+    return <>Loading...........</>;
+  }
+  const { sports, police, truck } = toys;
+  console.log(Array(truck[1]));
+  // console.log(toys.police);
   return (
     <div>
-      <Tabs forceRenderTabPanel defaultIndex={1}>
-        <TabList>
+      <Tabs forceRenderTabPanel defaultIndex={1} className="container">
+        <TabList className="bg-slate-500 text-white font-bold rounded-md shadow-lg mb-2">
           <Tab>Sports Car</Tab>
           <Tab>Police Car</Tab>
           <Tab>Truck Car</Tab>
@@ -17,18 +35,14 @@ const Category = () => {
               <Tab>Sports 2</Tab>
             </TabList>
             <TabPanel>
-              <p>Husband of Marge; father of Bart, Lisa, and Maggie.</p>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Homer_Simpson_2006.png/212px-Homer_Simpson_2006.png"
-                alt="Homer Simpson"
-              />
+              {Array(sports[0]).map((data) => (
+                <SingleTabPanel data={data} key={data.id} />
+              ))}
             </TabPanel>
             <TabPanel>
-              <p>Wife of Homer; mother of Bart, Lisa, and Maggie.</p>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Marge_Simpson.png/220px-Marge_Simpson.png"
-                alt="Marge Simpson"
-              />
+              {Array(sports[1]).map((data) => (
+                <SingleTabPanel data={data} key={data.id} />
+              ))}
             </TabPanel>
           </Tabs>
         </TabPanel>
@@ -40,24 +54,14 @@ const Category = () => {
               <Tab>Police Car 2</Tab>
             </TabList>
             <TabPanel>
-              <p>
-                Protagonist, from the 20th Century. Delivery boy. Many times
-                great-uncle to Professor Hubert Farnsworth. Suitor of Leela.
-              </p>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Philip_Fry.png/175px-Philip_Fry.png"
-                alt="Philip J. Fry"
-              />
+              {Array(police[0]).map((data) => (
+                <SingleTabPanel data={data} key={data.id} />
+              ))}
             </TabPanel>
             <TabPanel>
-              <p>
-                Mutant cyclops. Captain of the Planet Express Ship. Love
-                interest of Fry.
-              </p>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Turanga_Leela.png/150px-Turanga_Leela.png"
-                alt="Turanga Leela"
-              />
+              {Array(police[1]).map((data) => (
+                <SingleTabPanel data={data} key={data.id} />
+              ))}
             </TabPanel>
           </Tabs>
         </TabPanel>
@@ -68,24 +72,14 @@ const Category = () => {
               <Tab>Truck Car 2</Tab>
             </TabList>
             <TabPanel>
-              <p>
-                Protagonist, from the 20th Century. Delivery boy. Many times
-                great-uncle to Professor Hubert Farnsworth. Suitor of Leela.
-              </p>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Philip_Fry.png/175px-Philip_Fry.png"
-                alt="Philip J. Fry"
-              />
+              {Array(truck[0]).map((data) => (
+                <SingleTabPanel data={data} key={data.id} />
+              ))}
             </TabPanel>
             <TabPanel>
-              <p>
-                Mutant cyclops. Captain of the Planet Express Ship. Love
-                interest of Fry.
-              </p>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Turanga_Leela.png/150px-Turanga_Leela.png"
-                alt="Turanga Leela"
-              />
+              {Array(truck[1]).map((data) => (
+                <SingleTabPanel data={data} key={data.id} />
+              ))}
             </TabPanel>
           </Tabs>
         </TabPanel>

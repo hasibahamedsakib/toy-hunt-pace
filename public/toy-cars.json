@@ -1,38 +1,46 @@
-[
-    {
-        "name": "MIEBELY Remote Control Car, Bugatti Divo 1/16 Scale Rc Cars 12Km/h",
-        "details": {
-            "brand": "MIEBELY",
-            "material": "ABS Plastic",
-            "color": "Gray",
-            "age_range": "Adult, Teen, Kid"
+{
+    "sports": [
+        {
+            "id": 1,
+            "name": "HCK Set of 4 2017 Mc Laren 720S - Pull Back Toy Sports Cars 1:36 Scale (Red/Indigo/White/Blue)",
+            "price": "$21.99",
+            "rating": "4.7",
+            "image": "https://media.istockphoto.com/id/523036849/vector/race-car.jpg?s=612x612&w=0&k=20&c=i9MxmgKnKJCxyr7gxAUMT3ZF8TeceXC3nhgB6rfK5kc="
         },
-        "id": "B093XTFD2T",
-        "description": "Easy to Control: We designed this Bugatti remote control car having in mind nothing but the desire to help get a glimpse of the real driving experience with this supercar. Unlike other similar rc cars, our toy car allows you to control the speed and the proportional throttle by pulling the trigger, exactly like the original car.",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71w%2B0GyFZKL._AC_SL1500_.jpg"
-    },
-    {
-        "name": "Think Gizmos Take Apart Car",
-        "details": {
-            "brand": "Think Gizmos",
-            "material": "Plastic",
-            "color": "Multicolor",
-            "age_range": "3 to 5 years old"
+        {
+            "id": 2,
+            "name": "ZHFUYS 1:32 Bugatti Veyron diecast car,Alloy Model Cars Toy Cars for 3 to 12 Years Old",
+            "price": "$11.99",
+            "rating": "4.5",
+            "image": "https://media.istockphoto.com/id/523896591/vector/race-car.jpg?s=612x612&w=0&k=20&c=znbUv7tCiCsUbkfFov7FNDz1rjSVmvsCHWX_aOnTNOM="
+        }
+    ],
+    "police": [
+        {
+            "name": "Sunny Days Entertainment Large Police Car  Lights and Sounds Vehicle with Motorized Drive and Soft Grip Tires | Rescue SUV Patrol Toy for Kids – Maxx Action",
+            "price": "$15.99",
+            "rating": "4.6",
+            "image": "https://media.istockphoto.com/id/1482233232/vector/police-car.jpg?s=612x612&w=0&k=20&c=66iIxQOfpnuqY9HNqPCsHTzdvqVsoW6Ga7vYYnv0obM="
         },
-        "id": "B01LX5NY95",
-        "description": "Racing cars is fun, but kids will be even more invested in the game when they can build—and dismantle—the racers themselves. This toy car kit includes 30 parts, a drill, screws, the batteries necessary to make it go, and clear instructions. It'll help kids gain a basic understanding of mechanics and math, while also being a blast.",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/81KQ9bQfJ4L._AC_SL1500_.jpg"
-    },
-    {
-        "name": "Fireball Frankie",
-        "details": {
-            "brand": "WOW Toys",
-            "material": "Plastic",
-            "color": "Red",
-            "age_range": "5 years and up"
+        {
+            "name": "Driven by Battat  Micro Police SUV Toy Car with Lights and Sound  Rescue Cars and Toys for Kids Aged 3 and Up, WH1127Z, Blue,red",
+            "price": "$11.99",
+            "rating": "4.7",
+            "image": "https://media.istockphoto.com/id/519556804/photo/classic-american-police-car-model.jpg?s=612x612&w=0&k=20&c=walhs2Sq_evY1MErUPTD3m9TeE8euJv_JsU6Q-PmcZo="
+        }
+    ],
+    "truck": [
+        {
+            "name": "CatToysOfficial, CAT Construction Fleet 10 Dump Truck Toy, Ages 3 and up",
+            "price": "$10.99",
+            "rating": "4.8",
+            "image": "https://media.istockphoto.com/id/528289050/photo/blue-rc-truck-car.jpg?s=612x612&w=0&k=20&c=OQReO2aVHcOrtVAgWCNTZs_-OVSiMX4ECi97_JH19FQ="
         },
-        "id": null,
-        "description": null,
-        "image": null
-    }
-]
+        {
+            "name": "Nicmore Kids Toys Car for Boys: Boy Toy Trucks for 1 2 3 4 5 6 Year Old Boys Girls | Toddler Toys 5 in 1 Carrier Vehicle Construction Toys for Kids Age 1-2 2-4 3-5 | Birthday Party Boy Gifts for Kids",
+            "price": "$29.89",
+            "rating": "4.7",
+            "image": "https://media.istockphoto.com/id/620006890/photo/toy-car-truck.jpg?s=612x612&w=0&k=20&c=m4UBEwLfrG55Zc0S7Y2mbqMraIm9JtzOp_u5tEeNe6U="
+        }
+    ]
+}
