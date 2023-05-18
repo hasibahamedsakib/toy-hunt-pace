@@ -1,24 +1,22 @@
+import { Player } from "@lottiefiles/react-lottie-player";
+import { Link } from "react-router-dom";
+
 const Error = () => {
   return (
-    <div>
-      <div style="width:100%;height:0;padding-bottom:67%;position:relative;">
+    <div className="text-center">
+      <Player
+        src="https://assets8.lottiefiles.com/packages/lf20_bhw1ul4g.json"
+        className="player w-full h-fit lg:h-[600px]"
+        loop
+        autoplay
+      />
+      <h1 className="text-4xl font-bold ">Page Not Found </h1>
+      <p className="text-3xl  ">
         {" "}
-        <iframe
-          src="https://giphy.com/embed/MSU9sITGoHWMGGVn9n"
-          width="100%"
-          height="100%"
-          style="position:absolute"
-          frameBorder="0"
-          className="giphy-embed"
-          allowFullScreen
-        >
-          {" "}
-        </iframe>{" "}
-      </div>
-      <p>
-        <a href="https://giphy.com/gifs/brumbrumit-404-brumbrum-wwwbrumbrumit-MSU9sITGoHWMGGVn9n">
-          via GIPHY
-        </a>
+        back to{" "}
+        <Link className="text-orange-500 font-bold" to="/">
+          Home
+        </Link>
       </p>
     </div>
   );
