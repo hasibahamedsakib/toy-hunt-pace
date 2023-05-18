@@ -1,13 +1,27 @@
 import { Button, Textarea } from "flowbite-react";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 const AddToy = () => {
   const { user } = useContext(AuthContext);
   const { register, handleSubmit } = useForm();
 
   const handleAddToy = (value) => {
-    console.log(value);
+    const toyData = value;
+    fetch(" http://localhost:3000/toys", {
+      method: "POST",
+      headers: {
+        "Content-type": "Application/json",
+      },
+      body: JSON.stringify(toyData),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          Swal.fire(`Success`, "Toy Add SuccessFull...", "success");
+        }
+      });
   };
   return (
     <div className="container">
