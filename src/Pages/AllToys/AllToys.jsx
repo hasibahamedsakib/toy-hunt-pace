@@ -1,8 +1,11 @@
-import { Button, Table } from "flowbite-react";
+import { Table } from "flowbite-react";
+import { useLoaderData } from "react-router-dom";
+import ToyBody from "./ToyBody/ToyBody";
 
 const AllToys = () => {
+  const Data = useLoaderData();
   return (
-    <div>
+    <div className="container">
       <Table hoverable={true}>
         <Table.Head>
           <Table.HeadCell>Sealer Name</Table.HeadCell>
@@ -11,58 +14,13 @@ const AllToys = () => {
           <Table.HeadCell>Sub Category</Table.HeadCell>
           <Table.HeadCell>Quantity</Table.HeadCell>
           <Table.HeadCell>
-            <Button> Detail</Button>
+            <p> Detail</p>
           </Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              Apple MacBook Pro 17
-            </Table.Cell>
-            <Table.Cell>Sliver</Table.Cell>
-            <Table.Cell>Laptop</Table.Cell>
-            <Table.Cell>$2999</Table.Cell>
-            <Table.Cell>
-              <a
-                href="/tables"
-                className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-              >
-                Edit
-              </a>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              Microsoft Surface Pro
-            </Table.Cell>
-            <Table.Cell>White</Table.Cell>
-            <Table.Cell>Laptop PC</Table.Cell>
-            <Table.Cell>$1999</Table.Cell>
-            <Table.Cell>
-              <a
-                href="/tables"
-                className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-              >
-                Edit
-              </a>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              Magic Mouse 2
-            </Table.Cell>
-            <Table.Cell>Black</Table.Cell>
-            <Table.Cell>Accessories</Table.Cell>
-            <Table.Cell>$99</Table.Cell>
-            <Table.Cell>
-              <a
-                href="/tables"
-                className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-              >
-                Edit
-              </a>
-            </Table.Cell>
-          </Table.Row>
+          {Data.map((toy) => (
+            <ToyBody key={toy._id} toyBody={toy} />
+          ))}
         </Table.Body>
       </Table>
     </div>

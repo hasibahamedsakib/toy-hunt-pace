@@ -50,6 +50,7 @@ const router = createBrowserRouter([
             <AllToys />
           </PrivetRoute>
         ),
+        loader: () => fetch("http://localhost:3000/toys"),
       },
     ],
   },
