@@ -9,20 +9,20 @@ const TopBarCompo = () => {
   const { user, userLogOut } = useContext(AuthContext);
   return (
     <div className="container ">
-      <div className="md:flex items-center justify-around hidden">
-        <Navbar.Brand>
+      <div className="flex items-center justify-around">
+        <Navbar.Brand className="hidden md:flex">
           <img src={logo} className="mr-3  w-28 h-28" alt="toy hunt logo" />
           <span className="self-center whitespace-nowrap text-4xl font-bold dark:text-white font-sans ">
             Toy<span className="text-orange-500">Hunt</span>Place
           </span>
         </Navbar.Brand>
-        <div className="border-slate-600  border-2 w-[400px] py-1 px-1 rounded-full flex">
+        <div className="border-slate-600  border-2 w-[200px] md:w-[400px] py-1 px-1 rounded-full flex ">
           <input
-            className="w-full bg-transparent focus:border-none focus:outline-none rounded-full placeholder:text-gray-300"
+            className="w-full bg-transparent focus:border-none focus:outline-none rounded-full placeholder:text-gray-400"
             placeholder="Search"
             type="text"
           />
-          <button className="bg-orange-500 px-6 py-3 rounded-full text-white">
+          <button className="bg-orange-500 px-3 md:px-6 py-3 rounded-full text-white">
             <FaSearch className="w-6 h-6 " />
           </button>
         </div>
