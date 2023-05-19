@@ -21,7 +21,7 @@ const Login = () => {
     if (value.email.length < 1) {
       return setError("Please provide your email address");
     }
-    console.log(value);
+
     userLogin(value.email, value.password)
       .then((result) => {
         const currentUser = result.user;

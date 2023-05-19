@@ -1,22 +1,11 @@
 import { Table } from "flowbite-react";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import MyToyBody from "./MyToyBody/MyToyBody";
 
 const MyToys = () => {
-  const { user } = useContext(AuthContext);
-  const [myToys, setMyToys] = useState([]);
-
-  const URL = `http://localhost:3000/myToys?email=${user?.email}`;
-
-  useEffect(() => {
-    fetch(URL)
-      .then((res) => res.json())
-      .then((data) => {
-        setMyToys(data);
-      });
-  }, [URL]);
+  const { myToys, setMyToys } = useContext(AuthContext);
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -64,8 +53,6 @@ const MyToys = () => {
             <MyToyBody
               key={toy._id}
               toyBody={toy}
-              myToys={myToys}
-              setMyToys={setMyToys}
               handleDelete={handleDelete}
             />
           ))}

@@ -44,9 +44,23 @@ const AuthProvider = ({ children }) => {
     };
   });
 
+  const [myToys, setMyToys] = useState([]);
+
+  const URL = `http://localhost:3000/myToys?email=${user?.email}`;
+
+  useEffect(() => {
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setMyToys(data);
+      });
+  }, [URL]);
+
   const authInfo = {
     user,
     loading,
+    myToys,
+    setMyToys,
     userSignUp,
     userLogin,
     userLogOut,

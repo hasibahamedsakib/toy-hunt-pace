@@ -1,7 +1,8 @@
 import { Button, Table } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const ToyBody = ({ toyBody }) => {
-  const { sellerName, toyName, price, subCategory, quantity } = toyBody;
+  const { sellerName, toyName, price, subCategory, quantity, _id } = toyBody;
 
   return (
     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
@@ -13,9 +14,11 @@ const ToyBody = ({ toyBody }) => {
       <Table.Cell>{subCategory}</Table.Cell>
       <Table.Cell>{quantity} pic</Table.Cell>
       <Table.Cell>
-        <Button color="light" pill={true}>
-          View details
-        </Button>
+        <Link to={`/all-toys/${_id}`}>
+          <Button color="light" pill={true}>
+            View details
+          </Button>
+        </Link>
       </Table.Cell>
     </Table.Row>
   );

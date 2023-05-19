@@ -1,9 +1,11 @@
 import { Button, Modal, Textarea } from "flowbite-react";
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
-const UpdateModal = ({ open, setOpen, toyBody, myToys, setMyToys }) => {
+const UpdateModal = ({ open, setOpen, toyBody }) => {
+  const { myToys, setMyToys } = useContext(AuthContext);
   const { description, toyName, price, quantity, _id } = toyBody;
 
   const { register, handleSubmit } = useForm();
@@ -16,7 +18,7 @@ const UpdateModal = ({ open, setOpen, toyBody, myToys, setMyToys }) => {
       .then((res) => res.json())
       .then((result) => {
         if (result.modifiedCount > 0) {
-          Swal.fire("Updated", "Successfully deleted This Toy", "success");
+          Swal.fire("Updated", "Successfully Update This Toy", "success");
           const remaining = myToys.filter((toy) => toy._id !== _id);
           const update = myToys.find((toy) => toy._id === _id);
           update.price = value.price;
