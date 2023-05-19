@@ -3,11 +3,22 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const UpdateModal = ({ open, setOpen, toyBody }) => {
-  const { description, toyName, price, quantity } = toyBody;
+  const { description, toyName, price, quantity, _id } = toyBody;
 
   const { register, handleSubmit } = useForm();
   const handleAddToy = (value) => {
-    console.log(value);
+    fetch(`http://localhost:3000/toys/${_id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(value),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          alert("update successful");
+        }
+        console.log(result);
+      });
   };
   return (
     <React.Fragment>
@@ -15,7 +26,7 @@ const UpdateModal = ({ open, setOpen, toyBody }) => {
         <Modal.Header className="bg-gradient-to-r from-orange-100 to-green-100  ">
           <p className="text-center">Update Toy Data</p>
         </Modal.Header>
-        <Modal.Body className="bg-gradient-to-r from-purple-100 to-fuchsia-200">
+        <Modal.Body className="bg-gradient-to-r from-purple-100 to-fuchsia-200 rounded-b-md">
           <div className=" font-semibold   px-3 md:p-10 py-10  rounded-md">
             <form onSubmit={handleSubmit(handleAddToy)}>
               <div className="grid gap-3">
@@ -57,9 +68,9 @@ const UpdateModal = ({ open, setOpen, toyBody }) => {
               </div>
               <div className="mx-auto w-44">
                 <Button
-                  className="px-4 py-2 mt-5 border-2 "
+                  className="bg-gradient-to-r from-purple-400 to-fuchsia-400 hover:bg-gradient-to-r hover:from-fuchsia-400 hover:to-purple-400 px-4 py-1 mt-5 border-2 "
                   type="submit"
-                  gradientDuoTone="purpleToPink"
+                  gradientDuoTone="greenToBlue"
                 >
                   Update Toy
                 </Button>
