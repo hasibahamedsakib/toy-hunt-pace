@@ -19,7 +19,7 @@ const AddToy = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
-          Swal.fire(`Success`, "Toy Add SuccessFull...", "success");
+          Swal.fire(`Add Success`, "Toy Add SuccessFull...", "success");
         }
       });
   };

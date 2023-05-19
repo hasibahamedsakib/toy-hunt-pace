@@ -1,5 +1,6 @@
 import { Table } from "flowbite-react";
 import { useContext, useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import MyToyBody from "./MyToyBody/MyToyBody";
 
@@ -18,12 +19,29 @@ const MyToys = () => {
   }, [URL]);
 
   const handleUpdate = (id) => {
-    // alert("update button clicked");
+    Swal.fire("Updated", "Successfully deleted This Toy", "success");
     console.log(id);
   };
   const handleDelete = (id) => {
-    alert("Delete button clicked");
-    console.log(id);
+    Swal.fire({
+      title: "Do you want to delete this toy?",
+
+      showCancelButton: true,
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:3000/toys/${id}`, { method: "DELETE" })
+          .then((res) => res.json())
+          .then((result) => {
+            if (result.deletedCount === 1) {
+              Swal.fire("Deleted", "Successfully deleted This Toy", "success");
+
+              const remaining = myToys.filter((toy) => toy._id !== id);
+              setMyToys(remaining);
+            }
+          });
+      }
+    });
   };
 
   return (
