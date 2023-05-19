@@ -1,8 +1,9 @@
 import { Button, Modal, Textarea } from "flowbite-react";
 import React from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
-const UpdateModal = ({ open, setOpen, toyBody }) => {
+const UpdateModal = ({ open, setOpen, toyBody, myToys, setMyToys }) => {
   const { description, toyName, price, quantity, _id } = toyBody;
 
   const { register, handleSubmit } = useForm();
@@ -15,9 +16,16 @@ const UpdateModal = ({ open, setOpen, toyBody }) => {
       .then((res) => res.json())
       .then((result) => {
         if (result.modifiedCount > 0) {
-          alert("update successful");
+          Swal.fire("Updated", "Successfully deleted This Toy", "success");
+          const remaining = myToys.filter((toy) => toy._id !== _id);
+          const update = myToys.find((toy) => toy._id === _id);
+          update.price = value.price;
+          update.toyName = value.toyName;
+          update.description = value.description;
+          update.quantity = value.quantity;
+          const newToys = [update, ...remaining];
+          setMyToys(newToys);
         }
-        console.log(result);
       });
   };
   return (

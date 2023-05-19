@@ -18,10 +18,6 @@ const MyToys = () => {
       });
   }, [URL]);
 
-  const handleUpdate = (id) => {
-    Swal.fire("Updated", "Successfully deleted This Toy", "success");
-    console.log(id);
-  };
   const handleDelete = (id) => {
     Swal.fire({
       title: "Do you want to delete this toy?",
@@ -68,7 +64,8 @@ const MyToys = () => {
             <MyToyBody
               key={toy._id}
               toyBody={toy}
-              handleUpdate={handleUpdate}
+              myToys={myToys}
+              setMyToys={setMyToys}
               handleDelete={handleDelete}
             />
           ))}

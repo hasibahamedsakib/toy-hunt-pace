@@ -2,12 +2,11 @@ import { Button, Table } from "flowbite-react";
 import { useState } from "react";
 import UpdateModal from "../UpdateModal/UpdateModal";
 
-const MyToyBody = ({ toyBody, handleUpdate, handleDelete }) => {
+const MyToyBody = ({ toyBody, handleDelete, myToys, setMyToys }) => {
   const { sellerName, toyName, price, subCategory, quantity, _id } = toyBody;
   const [open, setOpen] = useState(false);
   const handleModalOpen = () => {
     setOpen(true);
-    handleUpdate(_id);
   };
 
   return (
@@ -23,7 +22,13 @@ const MyToyBody = ({ toyBody, handleUpdate, handleDelete }) => {
         <Button color="light" onClick={handleModalOpen}>
           Update
         </Button>
-        <UpdateModal toyBody={toyBody} open={open} setOpen={setOpen} />
+        <UpdateModal
+          toyBody={toyBody}
+          open={open}
+          setOpen={setOpen}
+          myToys={myToys}
+          setMyToys={setMyToys}
+        />
       </Table.Cell>
       <Table.Cell>
         <Button color="light" onClick={() => handleDelete(_id)}>
