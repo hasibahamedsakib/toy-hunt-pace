@@ -1,8 +1,7 @@
 import { Button, Table } from "flowbite-react";
 
-const ToyBody = ({ toyBody }) => {
+const MyToyBody = ({ toyBody }) => {
   const { sellerName, toyName, price, subCategory, quantity } = toyBody;
-
   return (
     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
       <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
@@ -13,12 +12,10 @@ const ToyBody = ({ toyBody }) => {
       <Table.Cell>{subCategory}</Table.Cell>
       <Table.Cell>{quantity} pic</Table.Cell>
       <Table.Cell>
-        <Button color="light" pill={true}>
-          View details
-        </Button>
+        <Button color="light">View details</Button>
       </Table.Cell>
     </Table.Row>
   );
 };
 
-export default ToyBody;
+export default MyToyBody;

@@ -6,6 +6,9 @@ const AllToys = () => {
   const Data = useLoaderData();
   return (
     <div className="container">
+      <div className="py-8 rounded-lg text-slate-600  text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
+        All Toys
+      </div>
       <Table hoverable={true}>
         <Table.Head>
           <Table.HeadCell>Sealer Name</Table.HeadCell>
