@@ -18,7 +18,7 @@ const MyToys = () => {
   }, [URL]);
 
   const handleUpdate = (id) => {
-    alert("update button clicked");
+    // alert("update button clicked");
     console.log(id);
   };
   const handleDelete = (id) => {
@@ -39,10 +39,10 @@ const MyToys = () => {
           <Table.HeadCell>Sub Category</Table.HeadCell>
           <Table.HeadCell>Quantity</Table.HeadCell>
           <Table.HeadCell>
-            <p> Update</p>
+            <p> Edit</p>
           </Table.HeadCell>
           <Table.HeadCell>
-            <p> Delete</p>
+            <p> Action</p>
           </Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">

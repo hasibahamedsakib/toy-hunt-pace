@@ -14,9 +14,7 @@ const AllToys = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
   };
-  // useEffect(() => {
 
-  // }, [searchText]);
   return (
     <div className="container">
       <div className="py-8 rounded-lg text-slate-600  text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
