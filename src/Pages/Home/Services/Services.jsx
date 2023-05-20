@@ -13,7 +13,7 @@ const Services = () => {
         Our Services
       </h1>
       {/*  */}
-      <div className="flex justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="p-10 text-center space-y-3">
           <div className=" w-[70px] border-pink-500 mx-auto border-2  rounded-full p-3">
             <FaShippingFast className="w-10 h-10  text-pink-500 font-bold" />
