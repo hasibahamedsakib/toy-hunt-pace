@@ -1,9 +1,18 @@
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { Button } from "flowbite-react";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 const SingleTabPanel = ({ data }) => {
+  const { user } = useContext(AuthContext);
   const { image, name, price, rating, des, id } = data;
 
+  const handleDetails = () => {
+    if (!user) {
+      return alert("Login First,to view Detail");
+    }
+  };
   return (
     <>
       <div className="w-full  shadow-lg mt-5 border-2 bg-violet-100 block md:flex rounded-md p-3">
@@ -26,9 +35,11 @@ const SingleTabPanel = ({ data }) => {
               {<Rating style={{ maxWidth: 120 }} value={rating} readOnly />}
             </span>
           </div>
-          <Button onClick={() => console.log(id)} gradientDuoTone="cyanToBlue">
-            view details
-          </Button>
+          <Link to={`/category-details/${id}`}>
+            <Button onClick={handleDetails} gradientDuoTone="cyanToBlue">
+              view details
+            </Button>
+          </Link>
         </div>
       </div>
     </>

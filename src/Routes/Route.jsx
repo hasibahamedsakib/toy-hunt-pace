@@ -3,6 +3,7 @@ import AddToy from "../Pages/AddToy/AddToy";
 import AllToys from "../Pages/AllToys/AllToys";
 import ViewDetails from "../Pages/AllToys/ViewDetails/ViewDetails";
 import Error from "../Pages/Error/Error";
+import CategoryDetails from "../Pages/Home/Category/CategoryDetais/CategoryDetais";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Main from "../Pages/Main/Main";
@@ -60,6 +61,16 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:3000/toys/${params.id}`),
+      },
+      {
+        path: "category-details/:id",
+        element: (
+          <PrivetRoute>
+            <CategoryDetails />
+          </PrivetRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/singleToy/${params.id}`),
       },
     ],
   },
