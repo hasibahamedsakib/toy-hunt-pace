@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
 
   const [myToys, setMyToys] = useState([]);
 
-  const URL = `http://localhost:3000/myToys?email=${user?.email}`;
+  const URL = `https://toy-hunt-place-server.vercel.app/myToys?email=${user?.email}`;
 
   useEffect(() => {
     fetch(URL)

@@ -10,7 +10,7 @@ const AddToy = () => {
   const handleAddToy = (value) => {
     const toyData = value;
 
-    fetch(" http://localhost:3000/toys", {
+    fetch("https://toy-hunt-place-server.vercel.app/toys", {
       method: "POST",
       headers: {
         "Content-type": "Application/json",

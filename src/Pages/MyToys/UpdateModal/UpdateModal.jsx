@@ -10,7 +10,7 @@ const UpdateModal = ({ open, setOpen, toyBody }) => {
 
   const { register, handleSubmit } = useForm();
   const handleAddToy = (value) => {
-    fetch(`http://localhost:3000/toys/${_id}`, {
+    fetch(`https://toy-hunt-place-server.vercel.app/toys/${_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(value),

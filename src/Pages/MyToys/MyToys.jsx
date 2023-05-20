@@ -15,7 +15,9 @@ const MyToys = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/toys/${id}`, { method: "DELETE" })
+        fetch(`https://toy-hunt-place-server.vercel.app/toys/${id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((result) => {
             if (result.deletedCount === 1) {

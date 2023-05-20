@@ -10,7 +10,7 @@ const AllToys = () => {
   const [searchText, setSearchText] = useState(" ");
 
   const handleSearch = async () => {
-    fetch(`http://localhost:3000/searchToy/${searchText}`)
+    fetch(`https://toy-hunt-place-server.vercel.app/searchToy/${searchText}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   };
