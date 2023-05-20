@@ -22,9 +22,9 @@ const CategoryDetails = () => {
             animation="duration-500"
             content={`Rating ${rating}`}
           >
-            <p className="cursor-pointer">
+            <div className="cursor-pointer">
               {<Rating style={{ maxWidth: 130 }} value={rating} readOnly />}
-            </p>
+            </div>
           </Tooltip>
           <p className="text-3xl text-slate-700">{price}.00</p>
 
@@ -35,6 +35,7 @@ const CategoryDetails = () => {
           </p>
 
           <p className="md:w-[500px]">Description : {des}</p>
+
           <div className="flex space-x-6">
             <Button className="w-1/2  bg-gradient-to-r from-purple-400 to-fuchsia-400 hover:bg-gradient-to-r hover:from-fuchsia-400 hover:to-purple-400 px-4 py-1 mt-5 border-2 ">
               Add To Cart

@@ -30,7 +30,7 @@ const Category = () => {
           Shop by Category
         </h1>
       </div>
-      <Tabs forceRenderTabPanel defaultIndex={1} className="container">
+      <Tabs forceRenderTabPanel defaultIndex={0} className="container">
         <TabList className="bg-slate-500 text-white font-bold rounded-md shadow-lg mb-2">
           <Tab>Sports Car</Tab>
           <Tab>Police Car</Tab>
@@ -38,17 +38,8 @@ const Category = () => {
         </TabList>
         <TabPanel>
           <Tabs forceRenderTabPanel>
-            <TabList className="bg-orange-600 text-white font-bold">
-              <Tab>Sports 1</Tab>
-              <Tab>Sports 2</Tab>
-            </TabList>
-            <TabPanel>
-              {Array(sports[0]).map((data) => (
-                <SingleTabPanel data={data} key={data.id} />
-              ))}
-            </TabPanel>
-            <TabPanel>
-              {Array(sports[1]).map((data) => (
+            <TabPanel className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {sports.map((data) => (
                 <SingleTabPanel data={data} key={data.id} />
               ))}
             </TabPanel>
@@ -57,17 +48,8 @@ const Category = () => {
 
         <TabPanel>
           <Tabs forceRenderTabPanel>
-            <TabList className="bg-lime-600 text-white font-bold">
-              <Tab>Police Car 1</Tab>
-              <Tab>Police Car 2</Tab>
-            </TabList>
-            <TabPanel>
-              {Array(police[0]).map((data) => (
-                <SingleTabPanel data={data} key={data.id} />
-              ))}
-            </TabPanel>
-            <TabPanel>
-              {Array(police[1]).map((data) => (
+            <TabPanel className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {police.map((data) => (
                 <SingleTabPanel data={data} key={data.id} />
               ))}
             </TabPanel>
@@ -75,17 +57,8 @@ const Category = () => {
         </TabPanel>
         <TabPanel>
           <Tabs forceRenderTabPanel>
-            <TabList className="bg-violet-600 text-white font-bold">
-              <Tab>Truck Car 1</Tab>
-              <Tab>Truck Car 2</Tab>
-            </TabList>
-            <TabPanel>
-              {Array(truck[0]).map((data) => (
-                <SingleTabPanel data={data} key={data.id} />
-              ))}
-            </TabPanel>
-            <TabPanel>
-              {Array(truck[1]).map((data) => (
+            <TabPanel className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {truck.map((data) => (
                 <SingleTabPanel data={data} key={data.id} />
               ))}
             </TabPanel>

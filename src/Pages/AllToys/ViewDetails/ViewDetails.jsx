@@ -17,7 +17,7 @@ const ViewDetails = () => {
     sellerEmail,
     rating,
   } = data;
-  console.log(data);
+
   return (
     <div className="container">
       <div className="py-8 rounded-lg text-slate-600 text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
@@ -34,9 +34,9 @@ const ViewDetails = () => {
             animation="duration-500"
             content={`Rating ${rating}`}
           >
-            <p className="cursor-pointer">
+            <div className="cursor-pointer">
               {<Rating style={{ maxWidth: 130 }} value={rating} readOnly />}
-            </p>
+            </div>
           </Tooltip>
           <p className="text-3xl text-slate-700">$ {price}.00</p>
 

@@ -6,7 +6,7 @@ import ToyBody from "./ToyBody/ToyBody";
 
 const AllToys = () => {
   const loadData = useLoaderData();
-  const [Data, setData] = useState(loadData);
+  const [Data, setData] = useState(loadData) || [];
   const [searchText, setSearchText] = useState(" ");
 
   const handleSearch = async () => {
@@ -53,7 +53,7 @@ const AllToys = () => {
           </Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
-          {Data.map((toy) => (
+          {Data?.map((toy) => (
             <ToyBody key={toy._id} toyBody={toy} />
           ))}
         </Table.Body>

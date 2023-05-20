@@ -1,4 +1,4 @@
-import { Button, Textarea } from "flowbite-react";
+import { Button, Select, Textarea } from "flowbite-react";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
@@ -9,6 +9,7 @@ const AddToy = () => {
 
   const handleAddToy = (value) => {
     const toyData = value;
+
     fetch(" http://localhost:3000/toys", {
       method: "POST",
       headers: {
@@ -61,13 +62,21 @@ const AddToy = () => {
               placeholder="user email"
               defaultValue={user.email}
             />
-            <input
+
+            <Select defaultValue="Sub Category" {...register("subCategory")}>
+              <option value="sports">Sports Car</option>
+              <option value="truck">Truck</option>
+              <option value="police">police Car</option>
+              <option value="fire">Fire Truck</option>
+              <option value="regular">Regular Car</option>
+            </Select>
+            {/* <input
               type="text"
               {...register("subCategory")}
               placeholder="Sub Category Name"
               className="rounded-lg placeholder:text-slate-300"
               required={true}
-            />
+            /> */}
             <input
               type="number"
               {...register("price")}
