@@ -2,7 +2,7 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { Button } from "flowbite-react";
 const SingleTabPanel = ({ data }) => {
-  const { image, name, price, rating, des } = data;
+  const { image, name, price, rating, des, id } = data;
 
   return (
     <>
@@ -26,10 +26,7 @@ const SingleTabPanel = ({ data }) => {
               {<Rating style={{ maxWidth: 120 }} value={rating} readOnly />}
             </span>
           </div>
-          <Button
-            onClick={() => console.log(data)}
-            gradientDuoTone="cyanToBlue"
-          >
+          <Button onClick={() => console.log(id)} gradientDuoTone="cyanToBlue">
             view details
           </Button>
         </div>
