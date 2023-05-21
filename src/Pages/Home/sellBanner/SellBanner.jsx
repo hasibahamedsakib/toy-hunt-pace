@@ -11,8 +11,8 @@ const SellBanner = () => {
           className="w-1/2 h-full hover:scale-105 transition-all duration-500"
           alt=""
         />
-        <div className=" pr-5 space-y-2">
-          <h2 className="text-5xl uppercase font-bold text-white">
+        <div className="pr-2 md:pr-5 space-y-2">
+          <h2 className="text-2xl md:text-5xl uppercase font-bold text-white">
             amazing toy sell
           </h2>
           <p className="bg-pink-700 text-white   font-bold px-3 py-2 rounded-md">

@@ -10,12 +10,14 @@ const TopBarCompo = () => {
   return (
     <div className="container ">
       <div className="flex items-center justify-around">
-        <Navbar.Brand className="hidden md:flex">
-          <img src={logo} className="mr-3  w-28 h-28" alt="toy hunt logo" />
-          <span className="self-center whitespace-nowrap text-4xl font-bold dark:text-white font-sans ">
-            Toy<span className="text-orange-500">Hunt</span>Place
-          </span>
-        </Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand className="hidden md:flex">
+            <img src={logo} className="mr-3  w-28 h-28" alt="toy hunt logo" />
+            <span className="self-center whitespace-nowrap text-4xl font-bold dark:text-white font-sans ">
+              Toy<span className="text-orange-500">Hunt</span>Place
+            </span>
+          </Navbar.Brand>
+        </Link>
         <div className="border-slate-600  border-2 w-[200px] md:w-[400px] py-1 px-1 rounded-full flex ">
           <input
             className="w-full bg-transparent focus:border-none focus:outline-none rounded-full placeholder:text-gray-400"

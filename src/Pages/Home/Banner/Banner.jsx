@@ -9,12 +9,12 @@ const Header = () => {
     >
       <div className="w-full h-full grid md:flex flex-col content-center md:justify-center items-left text-slate-200 px-2 container">
         <div className="w-full md:w-[520px] font-bold">
-          <h1 className="text-3xl py-2">
+          <h1 className="text-2xl md:text-4xl py-2">
             MIEBELY Remote Control Car, Bugatti Divo 1/16 Scale Rc Cars 12Km/h
           </h1>
           <h2 className="text-2xl ">Brand: MIEBELY</h2>
           <h2 className="text-2xl py-2">Material: ABS Plastic</h2>
-          <p>
+          <p className="text-sm md:text-base">
             Easy to Control: We designed this Bugatti remote control car having
             in mind nothing but the desire to help get a glimpse of the real
             driving experience with this supercar. Unlike other similar rc cars,

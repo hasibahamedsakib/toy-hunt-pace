@@ -1,47 +1,45 @@
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
-import { Button } from "flowbite-react";
+import { Button, Card } from "flowbite-react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
 const SingleTabPanel = ({ data }) => {
   const { user } = useContext(AuthContext);
-  const { image, name, price, rating, id } = data;
+  const { imageURL, price, _id, toyName, rating, description } = data;
 
   const handleDetails = () => {
     if (!user) {
-      return Swal.fire("Login First,to view Detail");
+      return Swal.fire("Login First,to view Details");
     }
   };
   return (
     <>
-      <div className="w-full  shadow-lg mt-5 border-2  block md:flex rounded-md p-3">
-        <img
-          className="w-96 h-64 rounded-md border-amber-200 border-8"
-          src={image}
-          alt=""
-        />
-        <div className="px-1 md:px-8 py-3">
-          <h5 className="text-lg font-semibold tracking-tight text-gray-600 dark:text-white">
-            {name.slice(0, 100)}
+      <div className="max-w-md ">
+        <Card imgSrc={imageURL}>
+          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {toyName}
           </h5>
-          {/* <h5 className="py-2 font-semibold tracking-tight text-gray-600 dark:text-white">
-            {des.slice(0, 100)}
-          </h5> */}
+          <p className="font-normal text-gray-700 dark:text-gray-400">
+            {description}
+          </p>
           <div className="font-bold py-3">
             <p className=" text-gray-700 dark:text-gray-400">Price: {price}</p>
             <span className="flex text-gray-700 dark:text-gray-400">
-              {rating}
               {<Rating style={{ maxWidth: 120 }} value={rating} readOnly />}
             </span>
           </div>
-          <Link to={`/category-details/${id}`}>
-            <Button onClick={handleDetails} gradientDuoTone="cyanToBlue">
+          <Link to={`/category-details/${_id}`}>
+            <Button
+              className="w-full"
+              onClick={handleDetails}
+              gradientMonochrome="pink"
+            >
               view details
             </Button>
           </Link>
-        </div>
+        </Card>
       </div>
     </>
   );

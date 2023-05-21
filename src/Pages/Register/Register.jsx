@@ -58,7 +58,7 @@ const Register = () => {
         const user = result.user;
 
         Swal.fire(
-          `Yahoo!! ${user && user?.displayName}`,
+          `Hurrah!! ${user && user?.displayName}`,
           "Google Login SuccessFull...",
           "success"
         );

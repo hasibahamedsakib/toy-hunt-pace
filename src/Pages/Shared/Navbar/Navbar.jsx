@@ -21,14 +21,20 @@ const NavBar = () => {
         </div>
         <Navbar.Collapse>
           <NavLink
-            className=" py-2 pl-3 pr-4 text-slate-600 font-bold rounded  md:hover:text-orange-500 hover:bg-slate-200 "
-            t5="/"
+            className={`${({ isActive }) =>
+              isActive
+                ? "active"
+                : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
+            to="/"
           >
             Home
           </NavLink>
 
           <NavLink
-            className="text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4"
+            className={`${({ isActive }) =>
+              isActive
+                ? "active"
+                : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
             to="/all-toys"
           >
             All Toys
@@ -37,14 +43,20 @@ const NavBar = () => {
           {user && (
             <>
               <NavLink
-                className="text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4"
+                className={`${({ isActive }) =>
+                  isActive
+                    ? "active"
+                    : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
                 to="/my-toys"
               >
                 My Toys
               </NavLink>
 
               <NavLink
-                className="text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4"
+                className={`${({ isActive }) =>
+                  isActive
+                    ? "active"
+                    : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
                 to="/add-toy"
               >
                 Add a Toy
@@ -53,7 +65,10 @@ const NavBar = () => {
           )}
 
           <NavLink
-            className="text-slate-600 font-bold rounded   md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4"
+            className={`${({ isActive }) =>
+              isActive
+                ? "active"
+                : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
             to="/blog"
           >
             Blog

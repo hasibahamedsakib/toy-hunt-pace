@@ -4,7 +4,6 @@ import AllToys from "../Pages/AllToys/AllToys";
 import ViewDetails from "../Pages/AllToys/ViewDetails/ViewDetails";
 import Blog from "../Pages/Blog/Blog";
 import Error from "../Pages/Error/Error";
-import CategoryDetails from "../Pages/Home/Category/CategoryDetais/CategoryDetais";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Main from "../Pages/Main/Main";
@@ -61,19 +60,17 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://toy-hunt-place-server.vercel.app/toys/${params.id}`),
+          fetch(`https://toy-hunt-place-server.vercel.app/toy/${params.id}`),
       },
       {
         path: "category-details/:id",
         element: (
           <PrivetRoute>
-            <CategoryDetails />
+            <ViewDetails />
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://toy-hunt-place-server.vercel.app/singleToy/${params.id}`
-          ),
+          fetch(`https://toy-hunt-place-server.vercel.app/toy/${params.id}`),
       },
       {
         path: "blog",

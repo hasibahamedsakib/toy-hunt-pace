@@ -1,8 +1,9 @@
 import AppTitle from "../../../Helmet/AppTitle";
 import BestSelling from "../BestSelling/BestSelling";
-import Category from "../Category/Category";
+
+import Header from "../Banner/Banner";
+import ToyCategory from "../Category/ToyCatagory/ToyCategory";
 import Gallery from "../Gallery/Gallery";
-import Header from "../Header/Header";
 import Services from "../Services/Services";
 import SellBanner from "../sellBanner/SellBanner";
 
@@ -12,7 +13,7 @@ const Home = () => {
       <AppTitle title="- Home" />
       <Header />
       <Gallery />
-      <Category />
+      <ToyCategory />
       <Services />
       <BestSelling />
       <SellBanner />
