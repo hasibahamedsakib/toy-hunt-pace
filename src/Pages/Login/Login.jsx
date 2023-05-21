@@ -27,7 +27,7 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         Swal.fire(
-          `Yahoo!! ${currentUser && currentUser?.displayName}`,
+          `Hurrah!! ${currentUser && currentUser?.displayName}`,
           "Login SuccessFull...",
           "success"
         );
