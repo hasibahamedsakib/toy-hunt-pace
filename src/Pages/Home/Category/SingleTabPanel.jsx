@@ -3,6 +3,7 @@ import "@smastrom/react-rating/style.css";
 import { Button } from "flowbite-react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
 const SingleTabPanel = ({ data }) => {
   const { user } = useContext(AuthContext);
@@ -10,7 +11,7 @@ const SingleTabPanel = ({ data }) => {
 
   const handleDetails = () => {
     if (!user) {
-      return alert("Login First,to view Detail");
+      return Swal.fire("Login First,to view Detail");
     }
   };
   return (

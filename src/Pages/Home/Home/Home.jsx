@@ -1,3 +1,4 @@
+import BestSelling from "../BestSelling/BestSelling";
 import Category from "../Category/Category";
 import Gallery from "../Gallery/Gallery";
 import Header from "../Header/Header";
@@ -11,6 +12,7 @@ const Home = () => {
       <Gallery />
       <Category />
       <Services />
+      <BestSelling />
       <SellBanner />
     </div>
   );

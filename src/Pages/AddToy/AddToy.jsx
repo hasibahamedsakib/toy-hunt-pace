@@ -25,99 +25,95 @@ const AddToy = () => {
       });
   };
   return (
-    <div className="container">
-      <div className="py-8 rounded-lg text-slate-600 text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
-        Add A Toy
-      </div>
-      <div className=" font-semibold bg-gradient-to-r from-violet-100 to-fuchsia-200  px-3 md:p-10 py-10  rounded-md">
-        <form onSubmit={handleSubmit(handleAddToy)}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <input
-              type="text"
-              {...register("imageURL")}
-              className="rounded-lg placeholder:text-slate-300"
-              required={true}
-              placeholder="Image URL"
-            />
-            <input
-              type="text"
-              {...register("toyName")}
-              className="rounded-lg placeholder:text-slate-300"
-              required={true}
-              placeholder="Toy Name"
-            />
-            <input
-              type="text"
-              {...register("sellerName")}
-              className="rounded-lg placeholder:text-slate-300"
-              required={true}
-              placeholder="user name"
-              defaultValue={user.displayName}
-            />
-            <input
-              type="text"
-              {...register("sellerEmail")}
-              className="rounded-lg placeholder:text-slate-300"
-              required={true}
-              placeholder="user email"
-              defaultValue={user.email}
-            />
+    <div className="bg-gradient-to-r from-pink-100 to-fuchsia-100">
+      <div className="container">
+        <div className="py-8 rounded-lg text-slate-600 text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
+          Add A Toy
+        </div>
+        <div className=" font-semibold p-3  rounded-md">
+          <form onSubmit={handleSubmit(handleAddToy)}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <input
+                type="text"
+                {...register("imageURL")}
+                className="rounded-lg placeholder:text-slate-300"
+                required={true}
+                placeholder="Image URL"
+              />
+              <input
+                type="text"
+                {...register("toyName")}
+                className="rounded-lg placeholder:text-slate-300"
+                required={true}
+                placeholder="Toy Name"
+              />
+              <input
+                type="text"
+                {...register("sellerName")}
+                className="rounded-lg placeholder:text-slate-300"
+                required={true}
+                placeholder="user name"
+                defaultValue={user.displayName}
+              />
+              <input
+                type="text"
+                {...register("sellerEmail")}
+                className="rounded-lg placeholder:text-slate-300"
+                required={true}
+                placeholder="user email"
+                defaultValue={user.email}
+              />
 
-            <Select defaultValue="Sub Category" {...register("subCategory")}>
-              <option value="sports">Sports Car</option>
-              <option value="truck">Truck</option>
-              <option value="police">police Car</option>
-              <option value="fire">Fire Truck</option>
-              <option value="regular">Regular Car</option>
-            </Select>
-            {/* <input
-              type="text"
-              {...register("subCategory")}
-              placeholder="Sub Category Name"
-              className="rounded-lg placeholder:text-slate-300"
-              required={true}
-            /> */}
-            <input
-              type="number"
-              {...register("price")}
-              placeholder="Toy Price"
-              className="rounded-lg placeholder:text-slate-300"
-              required={true}
-            />
+              <Select defaultValue="Sub Category" {...register("subCategory")}>
+                <option value="sports">Sports Car</option>
+                <option value="truck">Truck</option>
+                <option value="police">police Car</option>
+                <option value="fire">Fire Truck</option>
+                <option value="regular">Regular Car</option>
+              </Select>
 
-            <input
-              type="text"
-              {...register("rating")}
-              placeholder="Rating"
-              className="rounded-lg placeholder:text-slate-300"
-              required={true}
-            />
-            <input
-              type="text"
-              {...register("quantity")}
-              placeholder="Available Quantity"
-              className="rounded-lg placeholder:text-slate-300"
-              required={true}
-            />
+              <input
+                type="number"
+                {...register("price")}
+                placeholder="Toy Price"
+                className="rounded-lg placeholder:text-slate-300"
+                required={true}
+              />
 
-            <Textarea
-              {...register("description")}
-              placeholder="Details Description "
-              className="rounded-lg placeholder:text-slate-300 w-full"
-              required={true}
-              rows={4}
-            />
-          </div>
-          <div className="mx-auto w-32">
-            <Button
-              className="px-4 py-2 mt-5 border-2 "
-              type="submit"
-              gradientDuoTone="purpleToPink"
-            >
-              Add Toy
-            </Button>
-          </div>
-        </form>
+              <input
+                type="text"
+                {...register("rating")}
+                placeholder="Rating"
+                className="rounded-lg placeholder:text-slate-300"
+                required={true}
+              />
+              <input
+                type="text"
+                {...register("quantity")}
+                placeholder="Available Quantity"
+                className="rounded-lg placeholder:text-slate-300"
+                required={true}
+              />
+
+              <Textarea
+                {...register("description")}
+                placeholder="Details Description "
+                className="rounded-lg placeholder:text-slate-300 w-full"
+                required={true}
+                rows={4}
+              />
+            </div>
+            <div className="mx-auto w-32">
+              <Button
+                className="px-4 pt-2 mt-5 border-2 "
+                type="submit"
+                gradientDuoTone="purpleToPink"
+              >
+                Add Toy
+              </Button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

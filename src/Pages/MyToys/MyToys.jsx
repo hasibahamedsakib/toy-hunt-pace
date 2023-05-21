@@ -1,12 +1,24 @@
 import { Table } from "flowbite-react";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import MyToyBody from "./MyToyBody/MyToyBody";
 
 const MyToys = () => {
-  const { myToys, setMyToys } = useContext(AuthContext);
+  const { user, myToys, setMyToys } = useContext(AuthContext);
+  const [select, setSelect] = useState("");
+  useEffect(() => {
+    if (select == "true" || select == "false") {
+      const URL = `https://toy-hunt-place-server.vercel.app/myToys?email=${user?.email}&sort=${select}`;
+      fetch(URL)
+        .then((res) => res.json())
+        .then((data) => {
+          setMyToys(data);
+        });
+    }
+  }, [select, setMyToys, user]);
 
+  console.log(select);
   const handleDelete = (id) => {
     Swal.fire({
       title: "Do you want to delete this toy?",
@@ -35,6 +47,14 @@ const MyToys = () => {
     <div className="container">
       <div className="py-8 rounded-lg text-slate-600  text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
         My Toys
+        <select
+          onChange={(e) => setSelect(e.target.value)}
+          className="float-right p-2 border-2 bg-transparent border-red-200 rounded-md focus:outline-none mr-3"
+        >
+          <option>Sorting By Price</option>
+          <option value={true}>Ascending</option>
+          <option value={false}>Descending</option>
+        </select>
       </div>
       <Table hoverable={true}>
         <Table.Head>

@@ -11,7 +11,7 @@ const ToyBody = ({ toyBody }) => {
       </Table.Cell>
       <Table.Cell>{toyName}</Table.Cell>
       <Table.Cell>${price}</Table.Cell>
-      <Table.Cell>{subCategory}</Table.Cell>
+      <Table.Cell>{subCategory} </Table.Cell>
       <Table.Cell>{quantity} pic</Table.Cell>
       <Table.Cell>
         <Link to={`/all-toys/${_id}`}>

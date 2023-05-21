@@ -8,7 +8,7 @@ const NavBar = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="bg-gradient-to-l from-yellow-50 to-green-100 text-gray-700 font-semibold ">
+    <div className="bg-gradient-to-l from-pink-50 to-green-100 text-gray-700 font-semibold ">
       <TopBarCompo />
       <Navbar className="bg-gradient-to-l from-orange-50 to-blue-100 border-t-2 border-slate-500">
         <Navbar.Brand className="">

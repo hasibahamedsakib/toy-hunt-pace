@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const FooterCompo = () => {
   const logo = "https://i.ibb.co/wYD5mjJ/R-4-removebg-preview.png";
   return (
-    <div className="bg-slate-600 mt-10">
-      <Footer className="container bg-slate-600 text-white">
+    <div className="bg-[#475569] ">
+      <Footer className="container bg-[#475569] text-white">
         <div className="w-full text-center">
           <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
             <Navbar.Brand className="hidden md:flex">
