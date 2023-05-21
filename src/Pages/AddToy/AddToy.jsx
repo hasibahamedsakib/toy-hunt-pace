@@ -2,6 +2,7 @@ import { Button, Select, Textarea } from "flowbite-react";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import AppTitle from "../../Helmet/AppTitle";
 import { AuthContext } from "../../Provider/AuthProvider";
 const AddToy = () => {
   const { user } = useContext(AuthContext);
@@ -26,6 +27,7 @@ const AddToy = () => {
   };
   return (
     <div className="bg-gradient-to-r from-pink-100 to-fuchsia-100">
+      <AppTitle title="- Add Toy" />
       <div className="container">
         <div className="py-8 rounded-lg text-slate-600 text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
           Add A Toy

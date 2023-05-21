@@ -1,3 +1,4 @@
+import AppTitle from "../../../Helmet/AppTitle";
 import BestSelling from "../BestSelling/BestSelling";
 import Category from "../Category/Category";
 import Gallery from "../Gallery/Gallery";
@@ -8,6 +9,7 @@ import SellBanner from "../sellBanner/SellBanner";
 const Home = () => {
   return (
     <div>
+      <AppTitle title="- Home" />
       <Header />
       <Gallery />
       <Category />

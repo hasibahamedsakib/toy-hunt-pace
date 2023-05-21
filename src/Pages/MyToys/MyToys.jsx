@@ -1,6 +1,7 @@
 import { Table } from "flowbite-react";
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import AppTitle from "../../Helmet/AppTitle";
 import { AuthContext } from "../../Provider/AuthProvider";
 import MyToyBody from "./MyToyBody/MyToyBody";
 
@@ -18,7 +19,6 @@ const MyToys = () => {
     }
   }, [select, setMyToys, user]);
 
-  console.log(select);
   const handleDelete = (id) => {
     Swal.fire({
       title: "Do you want to delete this toy?",
@@ -45,6 +45,7 @@ const MyToys = () => {
 
   return (
     <div className="container">
+      <AppTitle title="- My Toys" />
       <div className="py-8 rounded-lg text-slate-600  text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
         My Toys
         <select

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import AppTitle from "../../Helmet/AppTitle";
 import { AuthContext } from "../../Provider/AuthProvider";
 const logo = "https://i.ibb.co/wYD5mjJ/R-4-removebg-preview.png";
 const Login = () => {
@@ -52,6 +53,7 @@ const Login = () => {
   };
   return (
     <div className="bg-slate-400 ">
+      <AppTitle title=" - Login" />
       <div className=" container ">
         <div className="w-60 text-center  mx-auto">
           <img src={logo} className=" mx-auto w-28 h-28" alt="toy hunt logo" />

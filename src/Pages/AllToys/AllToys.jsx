@@ -2,6 +2,7 @@ import { Table } from "flowbite-react";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
+import AppTitle from "../../Helmet/AppTitle";
 import ToyBody from "./ToyBody/ToyBody";
 
 const AllToys = () => {
@@ -17,6 +18,7 @@ const AllToys = () => {
 
   return (
     <div className="container">
+      <AppTitle title="- All Toys" />
       <div className="py-8 rounded-lg text-slate-600  text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
         All Toys
       </div>

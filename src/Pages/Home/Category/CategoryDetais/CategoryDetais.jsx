@@ -3,11 +3,13 @@ import "@smastrom/react-rating/style.css";
 import { Button, Tooltip } from "flowbite-react";
 import { FaHeart } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
+import AppTitle from "../../../../Helmet/AppTitle";
 const CategoryDetails = () => {
   const categoryDetails = useLoaderData();
   const { image, name, price, rating, des } = categoryDetails;
   return (
     <div className="container">
+      <AppTitle title="- Category Details" />
       <div className="py-8 rounded-lg text-slate-600 text-3xl font-bold bg-gradient-to-r from-orange-200 to-green-100 text-center mb-3">
         View Details For Toy
       </div>

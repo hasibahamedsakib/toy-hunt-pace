@@ -4,7 +4,10 @@ const FooterCompo = () => {
   const logo = "https://i.ibb.co/wYD5mjJ/R-4-removebg-preview.png";
   return (
     <div className="bg-[#475569] ">
-      <Footer className="container bg-[#475569] text-white">
+      <Footer
+        style={{ background: "#475569" }}
+        className="container  text-white"
+      >
         <div className="w-full text-center">
           <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
             <Navbar.Brand className="hidden md:flex">
