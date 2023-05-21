@@ -1,11 +1,9 @@
 import { Navbar } from "flowbite-react";
-import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { AuthContext } from "../../../Provider/AuthProvider";
 import TopBarCompo from "./TopBar";
 
 const NavBar = () => {
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
 
   return (
     <div className="bg-gradient-to-l from-pink-50 to-green-100 text-gray-700 font-semibold ">
@@ -40,29 +38,29 @@ const NavBar = () => {
             All Toys
           </NavLink>
 
-          {user && (
-            <>
-              <NavLink
-                className={`${({ isActive }) =>
-                  isActive
-                    ? "active"
-                    : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
-                to="/my-toys"
-              >
-                My Toys
-              </NavLink>
+          {/* {user && (
+            <> */}
+          <NavLink
+            className={`${({ isActive }) =>
+              isActive
+                ? "active"
+                : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
+            to="/my-toys"
+          >
+            My Toys
+          </NavLink>
 
-              <NavLink
-                className={`${({ isActive }) =>
-                  isActive
-                    ? "active"
-                    : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
-                to="/add-toy"
-              >
-                Add a Toy
-              </NavLink>
-            </>
-          )}
+          <NavLink
+            className={`${({ isActive }) =>
+              isActive
+                ? "active"
+                : ""} text-slate-600 font-bold rounded duration-150 transition-all  md:hover:text-orange-500 hover:bg-slate-200 py-2 pl-3 pr-4`}
+            to="/add-toy"
+          >
+            Add a Toy
+          </NavLink>
+          {/* </>
+          )} */}
 
           <NavLink
             className={`${({ isActive }) =>
