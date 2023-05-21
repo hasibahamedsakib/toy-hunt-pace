@@ -1,6 +1,6 @@
-import { Spinner } from "flowbite-react";
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
+import Loader from "../Pages/Loader/Loader";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const PrivetRoute = ({ children }) => {
@@ -8,7 +8,7 @@ const PrivetRoute = ({ children }) => {
   const location = useLocation();
 
   if (loading) {
-    return <Spinner aria-label="Extra large spinner example" size="xl" />;
+    return <Loader />;
   }
   if (user) {
     return children;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import Loader from "../../Loader/Loader";
 import SingleTabPanel from "./SingleTabPanel";
 
 const Category = () => {
@@ -16,7 +17,7 @@ const Category = () => {
       });
   }, []);
   if (loading) {
-    return <>Loading...........</>;
+    return <Loader />;
   }
   const { sports, police, truck } = toys;
 

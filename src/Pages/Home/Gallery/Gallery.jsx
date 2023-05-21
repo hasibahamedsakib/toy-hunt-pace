@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Loader from "../../Loader/Loader";
 import SingleCard from "./SingleCard/SingleCard";
 
 const Gallery = () => {
@@ -14,7 +15,7 @@ const Gallery = () => {
   }, []);
 
   if (loading) {
-    return <>Loading.........</>;
+    return <Loader />;
   }
 
   return (
