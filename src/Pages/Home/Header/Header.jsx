@@ -7,7 +7,7 @@ const Header = () => {
         backgroundImage: `linear-gradient(to right,rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),url(${headerImg})`,
       }}
     >
-      <div className="w-full h-full grid md:flex flex-col content-center md:justify-center items-left text-slate-200 px-2 md:px-20">
+      <div className="w-full h-full grid md:flex flex-col content-center md:justify-center items-left text-slate-200 px-2 container">
         <div className="w-full md:w-[520px] font-bold">
           <h1 className="text-3xl py-2">
             MIEBELY Remote Control Car, Bugatti Divo 1/16 Scale Rc Cars 12Km/h

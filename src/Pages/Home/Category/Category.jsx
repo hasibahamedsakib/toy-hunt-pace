@@ -22,9 +22,9 @@ const Category = () => {
   const { sports, police, truck } = toys;
 
   return (
-    <div className="py-10 bg-pink-50">
+    <div className="py-16 bg-pink-50">
       <div className="text-center ">
-        <p className="text-xl font-mono text-teal-400 text-center  font-bold py-3">
+        <p className="text-xl font-mono text-teal-400 text-center  font-bold pb-3">
           Sub Category item
         </p>
         <h1 className="text-5xl font-bold text-slate-800 mb-16">

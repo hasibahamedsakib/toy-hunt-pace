@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AddToy from "../Pages/AddToy/AddToy";
 import AllToys from "../Pages/AllToys/AllToys";
 import ViewDetails from "../Pages/AllToys/ViewDetails/ViewDetails";
+import Blog from "../Pages/Blog/Blog";
 import Error from "../Pages/Error/Error";
 import CategoryDetails from "../Pages/Home/Category/CategoryDetais/CategoryDetais";
 import Home from "../Pages/Home/Home/Home";
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
           fetch(
             `https://toy-hunt-place-server.vercel.app/singleToy/${params.id}`
           ),
+      },
+      {
+        path: "blog",
+        element: <Blog />,
       },
     ],
   },

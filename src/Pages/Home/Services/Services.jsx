@@ -8,10 +8,10 @@ import {
 
 const Services = () => {
   return (
-    <div className="bg-teal-50 py-10">
+    <div className="bg-teal-50 py-16">
       <div className="container ">
         <div className="text-center ">
-          <p className="text-xl font-mono text-teal-400 text-center  font-bold py-3">
+          <p className="text-xl font-mono text-teal-400 text-center  font-bold pb-3">
             We Are committed to provide our Service
           </p>
           <h1 className="text-5xl font-bold text-slate-800 mb-6">
