@@ -49,7 +49,7 @@ const TopBarCompo = () => {
           <Link to="/login">
             <div className="flex items-center space-x-2">
               <FaRegUser className="w-10 h-14  cursor-pointer" />
-              <div>
+              <div className="hidden md:block">
                 <p>Login Hear</p>
                 <p>My Account</p>
               </div>

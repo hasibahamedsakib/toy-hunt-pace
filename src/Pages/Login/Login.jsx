@@ -58,7 +58,7 @@ const Login = () => {
         <div className="w-60 text-center  mx-auto">
           <img src={logo} className=" mx-auto w-28 h-28" alt="toy hunt logo" />
         </div>
-        <div className="w-[600px] bg-white mx-auto p-10 rounded-lg">
+        <div className="w-full lg:w-[600px] bg-white mx-auto p-5 md:p-10 rounded-lg">
           <form
             className="flex flex-col gap-4 "
             onSubmit={handleSubmit(handleLogin)}
